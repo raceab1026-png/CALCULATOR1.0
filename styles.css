@@ -1,0 +1,93 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #1d1f20, #3e3e3e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Calculator Container */
+.calculator {
+  background: #2d2f31;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  width: 320px;
+}
+
+/* Display */
+.display {
+  background: #1c1e1f;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 60px;
+  overflow: hidden;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* Button Style */
+button {
+  background: #4e4e4e;
+  color: #fff;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+button:hover {
+  background: #6b6b6b;
+}
+
+/* Operators */
+.operator {
+  background: #ff9500;
+}
+
+.operator:hover {
+  background: #14a745;
+}
+
+/* Equal Button */
+.equal {
+  background: #34c759;
+}
+
+.equal:hover {
+  background: #28a745;
+}
+
+/* Clear Button */
+.clear {
+  background: #ff3b30;
+}
+
+.clear:hover {
+  background: #e02e25;
+}
+
+/* Zero button spans two columns */
+.zero {
+  grid-column: span 2;
+}
