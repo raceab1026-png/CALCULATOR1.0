@@ -16,24 +16,43 @@ body {
 
 /* Calculator Container */
 .calculator {
-  background: #2d2f31;
+  background: linear-gradient(145deg, #2d2f31, #3a3a3a);
+  border: 1px solid #444;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  width: 320px;
+  width: 420px;
+}
+
+/* Title Bar */
+.title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.5em;
 }
 
 /* Display */
 .display {
   background: #1c1e1f;
   color: #fff;
-  font-size: 2.5em;
+  font-size: 2.5em;       /* Bigger font */
   text-align: right;
-  padding: 10px;
+  padding: 12px;          /* More padding */
   border-radius: 10px;
   margin-bottom: 20px;
-  height: 60px;
+  height: 60px;           /* Taller display */
   overflow: hidden;
+}
+
+/* Top Controls */
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 /* Buttons Grid */
@@ -41,35 +60,52 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Centered Zero Button */
+.buttons button:nth-child(14) {
+  grid-column: 2 / span 1;
+}
+
+/* History Display */
+.history {
+  background: #3a3a3a;
+  color: #fff;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 /* Button Style */
 button {
   background: #4e4e4e;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.2em;
   border: none;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   cursor: pointer;
   transition: background 0.3s ease;
+  flex: 1;
+  min-width: 60px;
 }
 
-/* Hover Effect */
 button:hover {
   background: #6b6b6b;
 }
 
-/* Operators */
+/* Special Buttons */
 .operator {
   background: #ff9500;
 }
 
 .operator:hover {
-  background: #14a745;
+  background: #ffac33;
 }
 
-/* Equal Button */
 .equal {
   background: #34c759;
 }
@@ -78,7 +114,6 @@ button:hover {
   background: #28a745;
 }
 
-/* Clear Button */
 .clear {
   background: #ff3b30;
 }
@@ -87,7 +122,7 @@ button:hover {
   background: #e02e25;
 }
 
-/* Zero button spans two columns */
-.zero {
-  grid-column: span 2;
+/* Hidden Class for Toggling History */
+.hidden {
+  display: none;
 }
